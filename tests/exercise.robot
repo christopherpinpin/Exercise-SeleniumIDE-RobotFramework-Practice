@@ -78,8 +78,86 @@ Library         SeleniumLibrary
     Click Element    item_4_title_link
     # Assert Not Text
     Element Text Should Not Be      class:inventory_details_name    Sauce Labs Backpack
-    
+    # Close browser
+    [Teardown]      Close Browser
 
+5 Sort product name (A to Z)
+    # Open Browser
+    Open Browser    https://www.saucedemo.com/      chrome
+    # Set window size
+    Maximize Browser Window
+    # Check if in login page
+    Page Should Contain Element     login-button
+    # Type username
+    Input Text      user-name       standard_user
+    # Type password
+    Input Text      password        secret_sauce
+    # Click login
+    Click Button    login-button
+    # Select Sort (A-Z)
+    Select From List By Index    class:product_sort_container      0
+    # Compare First Item
+    Element Text Should Be       class:inventory_item_name      Sauce Labs Backpack
+    # Close browser
+    [Teardown]      Close Browser
+
+6 Sort product name (Z to A)
+    # Open Browser
+    Open Browser    https://www.saucedemo.com/      chrome
+    # Set window size
+    Maximize Browser Window
+    # Check if in login page
+    Page Should Contain Element     login-button
+    # Type username
+    Input Text      user-name       standard_user
+    # Type password
+    Input Text      password        secret_sauce
+    # Click login
+    Click Button    login-button
+    # Select Sort (A-Z)
+    Select From List By Index    class:product_sort_container      1
+    # Compare First Item
+    Element Text Should Be       class:inventory_item_name      Test.allTheThings() T-Shirt (Red)
+    # Close browser
+    [Teardown]      Close Browser
+
+7 Sort product name (Low to High)
+    # Open Browser
+    Open Browser    https://www.saucedemo.com/      chrome
+    # Set window size
+    Maximize Browser Window
+    # Check if in login page
+    Page Should Contain Element     login-button
+    # Type username
+    Input Text      user-name       standard_user
+    # Type password
+    Input Text      password        secret_sauce
+    # Click login
+    Click Button    login-button
+    # Select Sort (A-Z)
+    Select From List By Index    class:product_sort_container      2
+    # Compare First Item
+    Element Text Should Be       class:inventory_item_name      Sauce Labs Onesie
+    # Close browser
+    [Teardown]      Close Browser
+
+8 Sort product name (High to Low)
+    # Open Browser
+    Open Browser    https://www.saucedemo.com/      chrome
+    # Set window size
+    Maximize Browser Window
+    # Check if in login page
+    Page Should Contain Element     login-button
+    # Type username
+    Input Text      user-name       standard_user
+    # Type password
+    Input Text      password        secret_sauce
+    # Click login
+    Click Button    login-button
+    # Select Sort (A-Z)
+    Select From List By Index    class:product_sort_container      3
+    # Compare First Item
+    Element Text Should Be       class:inventory_item_name      Sauce Labs Fleece Jacket
     # Close browser
     [Teardown]      Close Browser
 
