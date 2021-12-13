@@ -114,7 +114,7 @@ Library         SeleniumLibrary
     Input Text      password        secret_sauce
     # Click login
     Click Button    login-button
-    # Select Sort (A-Z)
+    # Select Sort (Z-A)
     Select From List By Index    class:product_sort_container      1
     # Compare First Item
     Element Text Should Be       class:inventory_item_name      Test.allTheThings() T-Shirt (Red)
@@ -134,7 +134,7 @@ Library         SeleniumLibrary
     Input Text      password        secret_sauce
     # Click login
     Click Button    login-button
-    # Select Sort (A-Z)
+    # Select Sort (Lo-Hi)
     Select From List By Index    class:product_sort_container      2
     # Compare First Item
     Element Text Should Be       class:inventory_item_name      Sauce Labs Onesie
@@ -154,7 +154,7 @@ Library         SeleniumLibrary
     Input Text      password        secret_sauce
     # Click login
     Click Button    login-button
-    # Select Sort (A-Z)
+    # Select Sort (Hi-Lo)
     Select From List By Index    class:product_sort_container      3
     # Compare First Item
     Element Text Should Be       class:inventory_item_name      Sauce Labs Fleece Jacket
